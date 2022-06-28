@@ -1,4 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import VueCompositionAPI, { createApp, h } from "@vue/composition-api";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Vue from "vue";
+import App from "./App.vue";
 
-createApp(App).mount('#app')
+Vue.use(VueCompositionAPI);
+
+const app = createApp({
+  render: () => h(App),
+});
+
+app.mount("#app");
